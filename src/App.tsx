@@ -4,7 +4,7 @@ import { LoginPage } from "./pages/LoginPage";
 import { Dashboard } from "./pages/Dashboard";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 // import { AuthRedirectRoute } from "./components/AuthRedirectRoute";
-import { AuthCallback } from "./pages/AuthCallback";
+// import { AuthCallback } from "./pages/AuthCallback";
 import { GoogleCallbackHandler } from "./components/auth/GoogleCallbackHandler";
 import { AuthRedirectRoute } from "./components/AuthRedirectRoute";
 
@@ -21,7 +21,7 @@ export const App: React.FC = () => (
         }
       />
 
-      <Route path="/auth/callback" element={<AuthCallback />} />
+      {/* <Route path="/auth/callback" element={<AuthCallback />} /> */}
       <Route path="/google/callback" element={<GoogleCallbackHandler />} />
 
       {/* Protected dashboard route */}

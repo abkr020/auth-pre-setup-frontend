@@ -3,7 +3,7 @@ import React from "react";
 import { Navigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 
-export const AuthRedirectRoute: React.FC<{ children: JSX.Element }> = ({ children }) => {
+export const AuthRedirectRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { user } = useAuth();
-  return user ? <Navigate to="/" replace /> : children;
+  return user ? <Navigate to="/" replace /> : <>{children}</>;
 };
